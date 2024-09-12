@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "crud-backend"
+version = "0.1.0"
+description = ""
+authors = ["AOBM <oblancomorales@gmail.com>"]
+readme = "README.md"
+packages = [{include = "crud_backend"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.1"
+psycopg2-binary = "^2.9.9"
+django-configurations = "^2.5.1"
+djangorestframework = "^3.15.2"
+drf-yasg = "^1.21.7"
+requests = "2.32.3"
+django-cors-headers = "^4.4.0"
+gunicorn = "^23.0.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+pytest-django = "^4.5.2"
+black = "^23.1a1"
+isort = "^5.11.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "core.settings"
