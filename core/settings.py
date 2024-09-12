@@ -142,14 +142,13 @@ class Common(Configuration):
     DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-
 # Configuración para entornos de desarrollo
 class Dev(Common):
     """
     Configuración específica para el entorno de desarrollo.
     """
-    CORS_ALLOWED_ORIGINS = ['http://localhost:5173', 'https://main.dlz6ua40g7mkh.amplifyapp.com']
-    ALLOWED_HOSTS = ['localhost', 'flk-crud-backend.up.railway.app']
+    CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+    ALLOWED_HOSTS = ['localhost', 'bbb-backend.up.railway.app']
     DEBUG = True  # Habilita el modo de depuración
 
 # Configuración para entornos de producción
@@ -157,8 +156,8 @@ class Prod(Common):
     """
     Configuración específica para el entorno de producción.
     """
-    CORS_ALLOWED_ORIGINS = ['https://main.dlz6ua40g7mkh.amplifyapp.com']
-    ALLOWED_HOSTS = ['flk-crud-backend.up.railway.app']
+    CORS_ALLOWED_ORIGINS = []
+    ALLOWED_HOSTS = ['bbb-backend.up.railway.app']
     DEBUG = True
 
     SECURE_SSL_REDIRECT = True
